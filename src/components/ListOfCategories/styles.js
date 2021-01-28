@@ -1,12 +1,12 @@
-import styled from 'styled-components';
+import styled, { css }  from 'styled-components';
 import { slideIn } from '../../styles/animation';
 
 export const List = styled.ul`
     display: flex;
     overflow: scroll;
     width: 100%;
-
-    &.fixed {
+    ${props => props.fixed  && css`
+    {
         ${slideIn()};
         background: #fff;
         border-radius: 60px;
@@ -18,9 +18,8 @@ export const List = styled.ul`
         right: 0;
         top: -20px;
         transform: scale(0.5);
-        z-index:1;
-    }
-`
+        z-index:1;`
+    }`
 
 export const Item = styled.li`
     padding: 0 8px;
