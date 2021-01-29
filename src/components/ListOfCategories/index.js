@@ -11,7 +11,7 @@ function useCategoriesData() {
         setLoading(true);
         window.fetch('https://petgram-server-angel-gamma.vercel.app/categories')
             .then(res => res.json())
-            .then(response => {
+            .then((response) => {
                 setCategories(response);
                 setLoading(false);
             })
