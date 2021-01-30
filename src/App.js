@@ -1,10 +1,12 @@
 import React from 'react';
 import { Logo } from './components/Logo';
 import { GlobalStyle } from './styles/GlobalStyles';
+import { NavBar } from './components/NavBar';
 
 import { Home } from './pages/Home';
-import { Router } from '@reach/router';
 import { Detail } from './pages/Detail';
+
+import { Router } from '@reach/router';
 
 export const App = () => {
     return (
@@ -16,6 +18,7 @@ export const App = () => {
                 <Home path='/pet/:categoryId' />
                 <Detail path='/detail/:detailId' />
             </Router>
+            <NavBar />
         </>
     )
 }
